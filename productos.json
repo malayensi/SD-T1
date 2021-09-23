@@ -1,24 +1,24 @@
 {
     "products": [
       {
-        "name": "12312",
-        "price": 12312
+        "name": "leche",
+        "price": 1000
       },
       {
         "name": "cpu",
-        "price": 12312
+        "price": 200000
       },
       {
-        "name": "12312",
-        "price": 12312
+        "name": "manzana",
+        "price": 300
       },
       {
-        "name": "12312",
-        "price": 12312
+        "name": "naranja",
+        "price": 1000
       },
       {
-        "name": "12312",
-        "price": 12312
+        "name": "lechuga",
+        "price": 900
       }
     ]
   }
