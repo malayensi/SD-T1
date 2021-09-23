@@ -14,13 +14,15 @@ class SearchService(pb2_grpc.SearchServicer):
         message = request.message
         f = open('productos.json',)
         data = json.load(f)
+        encontrado=False
         for i in data['products']:
             if i["name"]==message:
+                encontrado=True
                 result = {'name': i["name"], 'price': i["price"]}
                 search_res = {'product': [result]}
                 return pb2.SearchResults(**search_res)
-            #else:
-                #return(None)
+        if encontrado==False:
+                return(None)
         #result = f'Hello I am up and running received "{message}" message from you'
         #result = {'name': "nombre", 'price': 123}
         #search_res = {'product': [result]}
