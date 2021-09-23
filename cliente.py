@@ -1,6 +1,7 @@
 import grpc
 import search_pb2_grpc as pb2_grpc
 import search_pb2 as pb2
+import json
 
 
 class SearchClient(object):
@@ -27,9 +28,14 @@ class SearchClient(object):
         #print(f'{message}')
         return self.stub.GetServerResponse(message)
 
-
-if __name__ == '__main__':
+def funcion(nombreproducto):
     client = SearchClient()
-    result = client.get_url(message="cpu")
+    result = client.get_url(message=nombreproducto)
+    return(result)
+
+#if __name__ == '__main__':
+    #print(json.loads(str(funcion("cpu"))))
+    #client = SearchClient()
+    #result = client.get_url(message="cpu")
     #print(result.product[0].name + "*******")
-    print(f'{result}')
+    #print(f'{result}')
